@@ -1,5 +1,4 @@
-Django==4.0.5
 pylint==2.14.1
 black==22.3.0
-django-rest-framework==0.1.0
-pylint-django==2.5.3
+Flask==2.1.2
+Flask-Cors==3.0.10
