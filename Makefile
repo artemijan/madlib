@@ -8,3 +8,6 @@ black:
 	black .
 test:
 	pytest
+
+docker-build:
+	docker build . -t fastapi:latest
