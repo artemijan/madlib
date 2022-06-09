@@ -1,9 +1,13 @@
 from pydantic import BaseModel, validator
-
 from core.enums import WordTypeEnum
 
 
 class MadlibSentence(BaseModel):
+    """
+    It's templated text, please use curly braces to specify word types:
+    e.g. {noun}, {adjective}, {verb}
+    """
+
     text: str
 
     @validator("text")
