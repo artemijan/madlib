@@ -2,7 +2,7 @@ install:
 	pip install -r requirements.txt
 
 pylint:
-	pylint --load-plugins pylint_django --django-settings-module=madlib.settings madlib/*
+	pylint ./*/**.py --ignore-paths=venv/ --extension-pkg-whitelist='pydantic'
 
 black:
-	black madlib/*
+	black .
