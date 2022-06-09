@@ -4,3 +4,5 @@ aiohttp==3.8.1
 fastapi==0.78.0
 pydantic==1.9.1
 uvicorn==0.17.6
+pytest==7.1.2
+starlette==0.19.1
