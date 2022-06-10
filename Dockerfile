@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 LABEL owner="Artem Fedorov"
 LABEL author.name="Artem Fedorov"
-LABEL authot.email="lineartem@gmail.com"
+LABEL author.email="lineartem@gmail.com"
 LABEL version="1.0"
 
 ARG USERNAME=app
