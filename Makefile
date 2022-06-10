@@ -1,3 +1,4 @@
+.PHONY: install pylint black docker-build
 install:
 	pip install -r requirements.txt
 
