@@ -1,5 +1,4 @@
-import unittest
-from unittest import mock
+from unittest import mock, TestCase
 
 import aiohttp
 from fastapi.testclient import TestClient
@@ -16,7 +15,7 @@ async def mock_get_word(
 
 
 @mock.patch("core.service.MadlibRandomWords.get_word", side_effect=mock_get_word)
-class ApiTestCase(unittest.TestCase):
+class ApiTestCase(TestCase):
     def test_not_templated_text_return_400(self, *_args):
         response = client.post(
             "/madlib",
