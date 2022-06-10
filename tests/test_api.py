@@ -9,7 +9,7 @@ client = TestClient(app)
 
 
 async def mock_get_word(
-        word_type: WordTypeEnum, _session: aiohttp.ClientSession
+    word_type: WordTypeEnum, _session: aiohttp.ClientSession
 ) -> dict[str, str]:
     return {word_type.value: word_type.value}
 
