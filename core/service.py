@@ -34,6 +34,6 @@ class MadlibRandomWords:
             return result
 
     @staticmethod
-    async def solve_sentence(sentence: MadlibSentence):
+    async def solve_sentence(sentence: MadlibSentence) -> SolvedMadlibSentence:
         words = await MadlibRandomWords.get_words(WordTypeEnum.choices())
         return SolvedMadlibSentence(text=sentence.text.format(**words))
