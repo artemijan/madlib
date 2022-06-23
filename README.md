@@ -9,42 +9,44 @@
 ## Local deployment
 
 1. Clone repository and cd into folder
+
 2. Create virtual environment by:
 
-```shell
-python -m venv venv
-```
+   ```shell
+   python -m venv venv
+   ```
 
-3. Activate it
+3. Activate it:
+
    for shell prompt
 
-```shell
-source venv/bin/activate
-```
+   ```shell
+   source venv/bin/activate
+   ```
 
-for fish prompt
+   for fish prompt
 
-```shell
-source venv/bin/activate.fish
-```
+   ```shell
+   source venv/bin/activate.fish
+   ```
 
 4. Install requirements:
 
-```shell
-pip install -r requirements.txt
-```
+   ```shell
+   pip install -r requirements.txt
+   ```
 
-or
+   or
 
-```shell
-make install
-```
+   ```shell
+   make install
+   ```
 
 5. Run application:
 
-```shell
-python -m uvicorn app:app --reload
-```
+   ```shell
+   python -m uvicorn app:app --reload
+   ```
 
 6. [Application](http://127.0.0.1:8000/docs) should be ready on port 8000
 
@@ -62,7 +64,9 @@ After that you should be able to access [app](http://0.0.0.0:8000/docs) on port 
 ```shell
 make test
 ```
+
 ## Testing app is working as expected from the terminal
+
 ```shell
 curl -d '{"text": "It was a {adjective} day. I went downstairs to see if I could {verb} dinner. I asked, \\"Does the stew need fresh {noun}.\\"" }' -H  "Content-Type: application/json"  -X POST "http://0.0.0.0:8000/madlib"
 ```
