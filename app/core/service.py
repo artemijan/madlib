@@ -1,9 +1,9 @@
 import asyncio
 import aiohttp
 
-from common.dto import MadlibSentence, SolvedMadlibSentence
-from core.config import Config
-from core.enums import WordTypeEnum
+from ..common.dto import MadlibSentence, SolvedMadlibSentence
+from ..core.config import Config
+from ..core.enums import WordTypeEnum
 
 __all__ = ["MadlibRandomWords"]
 

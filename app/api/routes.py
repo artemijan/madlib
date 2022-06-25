@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from common.dto import MadlibSentence, SolvedMadlibSentence
-from core.service import MadlibRandomWords
+from ..common.dto import MadlibSentence, SolvedMadlibSentence
+from ..core.service import MadlibRandomWords
 
 router = APIRouter()
 

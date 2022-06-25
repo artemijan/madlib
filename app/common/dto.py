@@ -1,5 +1,5 @@
 from pydantic import BaseModel, validator
-from core.enums import WordTypeEnum
+from ..core.enums import WordTypeEnum
 
 
 class MadlibSentence(BaseModel):

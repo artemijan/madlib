@@ -2,10 +2,10 @@ from unittest import mock, TestCase
 
 import aiohttp
 from fastapi.testclient import TestClient
-from app import app
-from core.enums import WordTypeEnum
+from app import main
+from app.core.enums import WordTypeEnum
 
-client = TestClient(app)
+client = TestClient(main.app)
 
 
 async def mock_get_word(
@@ -14,7 +14,7 @@ async def mock_get_word(
     return {word_type.value: word_type.value}
 
 
-@mock.patch("core.service.MadlibRandomWords.get_word", side_effect=mock_get_word)
+@mock.patch("app.core.service.MadlibRandomWords.get_word", side_effect=mock_get_word)
 class ApiTestCase(TestCase):
     def test_not_templated_text_return_400(self, *_args):
         response = client.post(
