@@ -20,3 +20,11 @@ class MadlibSentence(BaseModel):
 
 class SolvedMadlibSentence(BaseModel):
     text: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "text": "It was a {adjective} day. I went downstairs to see"
+                " if I could {verb} dinner. I asked, Does the stew need fresh {noun}."
+            }
+        }
