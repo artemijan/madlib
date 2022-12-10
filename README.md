@@ -45,7 +45,7 @@
 5. Run application:
 
    ```shell
-   python -m uvicorn app:app --reload
+   python -m uvicorn app.main:app --reload
    ```
 
 6. [Application](http://127.0.0.1:8000/docs) should be ready on port 8000
